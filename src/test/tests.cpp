@@ -12,7 +12,11 @@ TEST(tests, BasicoAlturaFloat){
   Pessoa p1;
   p1.altura = 1.8;
 
-  EXPECT_FLOAT_EQ(p1.altura, 1.5) << "Erro: altura não é do tipo float";;
+  EXPECT_FLOAT_EQ(1.5, p1.altura) << "Erro: altura não é do tipo float";
+}
+
+TEST(tests, BasicoSoma){
+  EXPECT_TRUE(2 == soma(1, 1)) << "Erro: idade não é do tipo int";
 }
 
 // Demonstrate some basic assertions.
