@@ -17,8 +17,6 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-# corrigir caminhos do hello.C
-
 add_executable(
   tests
   src/test/tests.cpp
