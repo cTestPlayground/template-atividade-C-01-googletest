@@ -1,11 +1,18 @@
 #include <gtest/gtest.h>
 #include "../main/main.h"
 
-TEST(tests, BasicStruct){
+TEST(tests, BasicoIdadeInt){
   Pessoa p1;
   p1.idade = 5.5;
 
-  EXPECT_TRUE(p1.idade == 5.5) << "Erro: idade não é do tipo int";
+  EXPECT_TRUE(p1.idade == 5) << "Erro: idade não é do tipo int";
+}
+
+TEST(tests, BasicoAlturaFloat){
+  Pessoa p1;
+  p1.altura = 1.8;
+
+  EXPECT_FLOAT_EQ(p1.altura, 1.5) << "Erro: altura não é do tipo float";;
 }
 
 // Demonstrate some basic assertions.
