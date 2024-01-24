@@ -5,6 +5,7 @@ project(my_project)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# =>>>>>>>>>> Atualizar hash do googletest
 include(FetchContent)
 FetchContent_Declare(
   googletest
@@ -19,13 +20,13 @@ enable_testing()
 # corrigir caminhos do hello.C
 
 add_executable(
-  hello_test
-  hello_test.cc
+  tests
+  src/test/tests.cpp
 )
 target_link_libraries(
-  hello_test
+  tests
   GTest::gtest_main
 )
 
 include(GoogleTest)
-gtest_discover_tests(hello_test)
+gtest_discover_tests(tests)

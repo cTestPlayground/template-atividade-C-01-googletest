@@ -1,10 +1,13 @@
 #!/bin/bash
 
-echo "cmake build"
+echo ""
+echo "=> cmake build"
 cmake -S . -B build
 
-echo "cmake --build"
+echo ""
+echo "=> cmake --build"
 cmake --build build
 
-echo "cd build and run test"
+echo ""
+echo "=> cd build and run test"
 cd build && ctest
